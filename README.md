@@ -1,53 +1,57 @@
-README - Projet Find My Word (R5A08)
-Objectifs
+# Projet Find My Word (R5A08)
+
+## Objectifs
 
 Le but de ce projet est de créer un jeu où un joueur doit deviner un mot de 5 lettres en un maximum de 6 tentatives. Après chaque tentative, le jeu doit fournir un retour sur chaque lettre du mot proposé :
 
-Vert : Lettre correcte et à la bonne position.
+- **Vert** : Lettre correcte et à la bonne position.
+- **Orange** : Lettre correcte, mais mal placée.
+- **Noir** : Lettre incorrecte.
 
-Orange : Lettre correcte, mais mal placée.
+Le projet suit une méthodologie de **développement dirigé par les tests (TDD)**, afin de s'assurer que chaque fonctionnalité est testée avant son développement.
 
-Noir : Lettre incorrecte.
+## Méthodologie
 
-Le projet suit une méthodologie de développement dirigé par les tests (TDD), afin de s'assurer que chaque fonctionnalité est testée avant son développement.
+Le développement du projet suit les étapes du **développement dirigé par les tests (TDD)**, qui consiste en trois phases :
 
-Méthodologie
+1. **Phase rouge** : Créer d'abord un test unitaire qui échoue.
+2. **Phase verte** : Implémenter juste assez de code pour faire passer le test.
+3. **Phase refactorisation** : Améliorer le code tout en garantissant que les tests sont toujours réussis.
 
-Phase rouge : Créer d'abord un test unitaire qui échoue.
+## Fonctionnalités
 
-Phase verte : Implémenter juste assez de code pour faire passer le test.
+Le projet implémente plusieurs fonctionnalités pour le jeu **Find My Word** :
 
-Phase refactorisation : Améliorer le code tout en maintenant les tests réussis.
+- **Méthode `guess()`** : Cette méthode compare une tentative de mot avec le mot secret et calcule le score pour chaque lettre.
+- **Classe `Score`** : Cette classe calcule et stocke l'évaluation des lettres (vert, orange, noir) pour chaque tentative.
 
-Fonctionnalités
+## Structure du Projet
 
-Le projet implémente une méthode guess() qui permet de comparer une tentative de mot avec le mot secret et calcule le score pour chaque lettre. Ce score est ensuite représenté par une classe Score.
+Le projet est organisé de la manière suivante :
 
-Classe Score : Elle calcule et stocke l'évaluation des lettres (vert, orange, noir) pour chaque tentative.
+- **Dépôt Git** : `r5a08_nom_findmyword`
+- **Branche Git** : `r5a08_nom_findmyword_step_1`
+- **Répertoires** :
+  - Un répertoire pour les tests unitaires avec **JUnit**.
+  - Un répertoire pour le code source du jeu.
 
-Structure du projet
+## Instructions pour le Développement
 
-Dépôt : r5a08_nom_findmyword
+### 1. Création du projet
 
-Branche : r5a08_nom_findmyword_step_1
+Créez un projet Java dans le répertoire `r5a08_nom_findmyword`.
 
-Répertoire : Le projet est structuré pour inclure des tests unitaires avec JUnit et un code fonctionnel pour le jeu.
+### 2. Développement des Tests Unitaires avec JUnit
 
-Instructions pour le Développement
+Commencez par l'écriture des tests unitaires pour la méthode **`guess()`**.
 
-Création du projet :
-Créez un projet Java dans le répertoire r5a08_nom_findmyword.
+- Les tests doivent vérifier le comportement de la méthode pour différentes tentatives (lettres correctes, mal placées, incorrectes).
+- Implémentez la classe **`Score`** pour calculer le résultat des lettres (vert, orange, noir).
 
-Développement des Tests Unitaires avec JUnit :
+### 3. Suivez les étapes TDD
 
-Commencez par l'écriture de tests unitaires pour la fonction guess().
+Suivez les étapes de **TDD** à chaque itération :
 
-Implémentez la classe Score pour calculer le résultat des lettres (vert, orange, noir).
-
-Suivez les étapes TDD :
-
-Phase rouge : Écrire les tests d'abord (ils échoueront au début).
-
-Phase verte : Implémenter juste le nécessaire pour faire passer les tests.
-
-Phase refactorisation : Améliorer et nettoyer le code tout en s'assurant que tous les tests passent.
+- **Phase rouge** : Écrire d'abord les tests d'unité (les tests échoueront initialement).
+- **Phase verte** : Implémenter juste le code nécessaire pour faire passer les tests.
+- **Phase refactorisation** : Améliorer et nettoyer le code tout en maintenant les tests réussis.
