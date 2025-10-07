@@ -1,4 +1,4 @@
-# Projet Find My Word (R5A08)
+# Projet Find My Word (R5A08) - Mohamed Kosbar
 
 ## Objectifs
 
