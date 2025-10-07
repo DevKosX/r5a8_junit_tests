@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WordTest {
+    //Test de vérification pour une lettre incorrecte
     @Test
     public void should_check_one_incorrect_letter() {
         Word word = new Word("E");
@@ -14,7 +15,7 @@ public class WordTest {
         Letter actual = Letter.INCORRECT;
         assertEquals(expected, actual, "Incorrect");
     }
-
+    // Test de vérification pour une lettre correcte
     @Test
     public void should_check_one_correct_letter() {
         Word word = new Word("A");
@@ -25,6 +26,8 @@ public class WordTest {
         assertEquals(expected, actual,"Correct");
 
     }
+
+    //Test de vérification pour une lettre correct mais pas à la bonne place
     @Test
     public void should_check_one_correct_letter_but_not_good_place() {
         Word word = new Word("B");
